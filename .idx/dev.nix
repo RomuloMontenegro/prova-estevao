@@ -7,6 +7,8 @@
   packages = [
     pkgs.nodejs_22
     pkgs.python3
+    pkgs.htmlq
+    pkgs.javascript-typescript-langservergi
   ];
   # Sets environment variables in the workspace
   env = {};
@@ -14,6 +16,9 @@
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
       # "vscodevim.vim"
+      "Gydunhn.html-essentials"
+      "Slipstream-Max.full-stack-pack"
+      "salesforce.salesforcedx-vscode"
       "google.gemini-cli-vscode-ide-companion"
     ];
     # Enable previews and customize configuration

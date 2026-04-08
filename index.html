@@ -1,14 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Monitoramento de Consumo de Energia em Nuvem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1d;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-weight: 300;
+            font-size: 2.5em;
+            color: #c5c6c7;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .widget {
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(44, 44, 52, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .widget h2, .widget h3 {
+            margin-top: 0;
+            font-weight: 400;
+            color: #66fcf1;
+            border-bottom: 1px solid #45a29e;
+            padding-bottom: 10px;
+        }
+
+        .summary-widget {
+            text-align: center;
+        }
+
+        .summary-widget p {
+            font-size: 2.5em;
+            margin: 10px 0 0;
+            font-weight: 700;
+            color: #f5f5f5;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <h1>Painel de Monitoramento de Consumo de Energia em Nuvem</h1>
+    </header>
+    <main class="dashboard-grid">
+        <div class="widget glass-effect">
+            <h2>Consumo em Tempo Real (kWh)</h2>
+            <p>Carregando gráfico...</p>
+        </div>
+        <div class="widget glass-effect">
+            <h2>Consumo por Serviço</h2>
+            <p>Carregando gráfico...</p>
+        </div>
+        <div class="widget glass-effect summary-widget">
+            <h3>Consumo Total</h3>
+            <p id="totalConsumption">0 kWh</p>
+        </div>
+        <div class="widget glass-effect summary-widget">
+            <h3>Custo Estimado</h3>
+            <p id="estimatedCost">$0.00</p>
+        </div>
+    </main>
 </body>
 </html>

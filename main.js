@@ -1,1 +1,1 @@
-// Add JS here
+// Lógica do painel será adicionada aqui
